@@ -1,6 +1,3 @@
-## 📄 README.md
-
-```markdown
 # Deadlocks Demonstration (C / POSIX Threads)
 
 ## 📌 Overview
@@ -37,14 +34,12 @@ The program creates two threads:
 This creates a circular dependency, causing the program to freeze (deadlock).
 
 Example Output:
-```
 
 Thread 1: locked lock1
 Thread 2: locked lock2
 Thread 1: waiting for lock2
 Thread 2: waiting for lock1
 
-````
 
 At this point, the program will stop progressing.
 
@@ -60,74 +55,65 @@ Install dependencies (Ubuntu / WSL):
 ```bash
 sudo apt update
 sudo apt install build-essential
-````
+```
 
----
-
-## ▶️ Compile and Run
+▶️ Compile and Run
 
 Compile:
 
-```bash
+```
 gcc deadlock.c -o deadlock -lpthread
 ```
 
 Run:
-
-```bash
+```
 ./deadlock
 ```
 
----
+-
+📂 Project Structure
 
-## 📂 Project Structure
-
-```
 Deadlocks/
 │
 ├── deadlock.c
 ├── README.md
 └── LICENSE
-```
 
----
-
-## 🎯 Learning Goals
+🎯 Learning Goals
 
 This project helps demonstrate:
 
-* Thread synchronization
-* Mutex locking
-* Race conditions
-* Deadlock creation
-* Concurrency debugging basics
+Thread synchronization
 
----
+Mutex locking
 
-## ⚠️ Note
+Race conditions
+
+Deadlock creation
+
+Concurrency debugging basics
+
+⚠️ Note
 
 This code intentionally creates a deadlock for educational purposes.
-Do **not** use this pattern in production systems.
+Do not use this pattern in production systems.
 
----
 
-## 📚 Technologies Used
+📚 Technologies Used
 
-* C Programming Language
-* POSIX Threads (pthread)
-* GCC Compiler
-* Linux / WSL Environment
+C Programming Language
 
----
+POSIX Threads (pthread)
 
-## 👤 Author
+GCC Compiler
 
-**Dixon Codes**
+Linux / WSL Environment
 
----
+👤 Author
 
-## 📜 License
+Dixon Codes
+
+
+📜 License
 
 This project is licensed under the MIT License.
-
-```
